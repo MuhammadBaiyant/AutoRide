@@ -1,0 +1,210 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Style */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.5;
+}
+
+/* Page-specific backgrounds */
+.home-page {
+  background-color: cornflowerblue;
+}
+.about-page {
+  background-color: aquamarine;
+}
+.services-page {
+  background-color: darkseagreen;
+}
+.gallery-page {
+  background-color: darkgray;
+}
+.contact-page {
+  background-color: darkcyan;
+}
+
+/*logo on every page*/
+.logo {
+  width: 70px;
+  height: 85px;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 31.25rem;
+  height: auto;
+}
+
+/*table in services page*/
+table {
+  width: 90%;
+  margin: 2rem auto;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #333333;
+  padding: 0.75rem;
+  text-align: left;
+}
+th {
+  font-weight: bold;
+  background-color: darkgreen;
+}
+tr:hover {
+  background-color: darkgreen;
+}
+
+/* Gallery page css*/
+
+.gallery-image {
+  width: 100%;
+  max-width: 25rem;
+  height: auto;
+}
+
+.gallery-video {
+  width: 100%;
+  max-width: 31.25rem;
+  height: auto;
+}
+
+figure {
+  display: inline-block;
+  margin: 1rem;
+  text-align: center;
+}
+
+figcaption {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Contact page css*/
+.map {
+  width: 100%;
+  max-width: 31.25rem;
+  height: 25rem;
+  border: 0;
+  margin: 1rem;
+}
+
+form {
+  width: 90%;
+  max-width: 37.5rem;
+  margin: 2rem auto;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid darkblue;
+}
+
+input[type="submit"] {
+  width: auto;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: lightgray;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 0.05rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.02rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*homw page image*/
+.home-image {
+  width: 100%;
+  max-width: 31.25rem;
+  height: auto;
+}
+
+/*media queries*/
+
+/* Tablet */
+@media (max-width: 1024px) {
+  nav {
+    gap: 0.5rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  nav {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    width: 95%;
+  }
+}
+
+ul {
+  list-style-position: inside;
+  padding: 0;
+  margin: 1rem auto;
+}
