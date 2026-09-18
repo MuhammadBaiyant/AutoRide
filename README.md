@@ -42,13 +42,13 @@ part 2 completed
 
 Use this for resizable images on diffrent size devices
 
-<!-- <img
-    src="images/economy.jpg"
-    srcset="images/economy-small.jpg 480w,
-            images/economy-medium.jpg 800w,
-            images/economy-large.jpg 1200w"
-    sizes="(max-width: 767px) 100vw,
-           (max-width: 1024px) 50vw,
-           400px"
-    alt="Economy car"
-    class="gallery-image"> -->
+<img
+src="images/economy.jpg"
+srcset="images/economy-small.jpg 480w,
+images/economy-medium.jpg 800w,
+images/economy-large.jpg 1200w"
+sizes="(max-width: 767px) 100vw,
+(max-width: 1024px) 50vw,
+400px"
+alt="Economy car"
+class="gallery-image">
