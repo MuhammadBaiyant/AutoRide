@@ -208,3 +208,42 @@ ul {
   padding: 0;
   margin: 1rem auto;
 }
+
+/* FAQ accordion */
+
+.faq {
+  max-width: 37.5rem;
+  margin: 2rem auto;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+}
+
+.faq-question:hover,
+.faq-question:focus {
+  background-color: lightgray;
+}
+
+.faq-answer {
+  padding: 1rem;
+  background-color: white;
+}
+
+.faq-answer[hidden] {
+  display: none;
+}
