@@ -247,3 +247,91 @@ ul {
 .faq-answer[hidden] {
   display: none;
 }
+
+/* Dynamic vehicle listings */
+
+#search,
+#category,
+#sort {
+  max-width: 37.5rem;
+  margin: 0.5rem auto;
+  display: block;
+}
+
+#vehicle-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+#vehicle-list > div {
+  padding: 1rem;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  background-color: white;
+}
+
+#vehicle-list h3 {
+  margin-bottom: 0.5rem;
+}
+
+.gallery-image {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+#close-lightbox {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+form label {
+  display: block;
+  text-align: left;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+#enquiry-response {
+  font-weight: bold;
+  margin: 1rem;
+}
+
+#contact-response {
+  font-weight: bold;
+  margin: 1rem;
+}

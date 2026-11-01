@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
+    <title>Contact Us | AutoRide Car Rentals</title>
+    <meta
+      name="description"
+      content="Contact AutoRide Car Rentals in Johannesburg for general questions, feedback and assistance."
+    />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
   <body class="contact-page">
@@ -14,6 +18,7 @@
         <a href="about.html">About Us</a>
         <a href="services.html">Services</a>
         <a href="gallery.html">Gallery</a>
+        <a href="enquiry.html">Rental Enquiry</a>
         <a href="contact.html">Contact Us</a>
       </nav>
     </header>
@@ -55,49 +60,41 @@
       >
       </iframe>
 
-      <!-- //enquiery form -->
-      <h2>Rental Enquiry</h2>
+      <h3>Send Us a Message</h3>
 
-      <form>
-        <p>
-          <label for="name">Full Name:</label><br />
-          <input type="text" id="name" name="name" />
-        </p>
-        <p>
-          <label for="email">Email:</label><br />
-          <input type="email" id="email" name="email" />
-        </p>
-        <p>
-          <label for="phone">Phone:</label><br />
-          <input type="tel" id="phone" name="phone" />
-        </p>
-        <p>
-          <label for="car">Car Type:</label><br />
+      <form id="contact-form" action="#" method="post">
+        <label for="contact-name">Full Name:</label>
+        <input type="text" id="contact-name" name="name" required />
 
-          <select id="car" name="car">
-            <option value="economy">Economy</option>
-            <option value="sedan">Sedan</option>
-            <option value="suv">SUV</option>
-            <option value="luxury">Luxury</option>
-          </select>
-        </p>
-        <p>
-          <label for="pickup">Pick-up Date:</label><br />
-          <input type="date" id="pickup" name="pickup" />
-        </p>
-        <p>
-          <label for="return">Return Date:</label><br />
-          <input type="date" id="return" name="return" />
-        </p>
-        <p>
-          <label for="message">Message:</label><br />
-          <textarea id="message" name="message" rows="5" cols="30"></textarea>
-        </p>
-        <p>
-          <input type="submit" value="Submit Enquiry" />
-        </p>
+        <label for="contact-email">Email Address:</label>
+        <input type="email" id="contact-email" name="email" required />
+
+        <label for="contact-phone">Phone Number:</label>
+        <input type="tel" id="contact-phone" name="phone" required />
+
+        <label for="message-type">Message Type:</label>
+        <select id="message-type" name="messageType" required>
+          <option value="">Select a message type</option>
+          <option value="General Question">General Question</option>
+          <option value="Feedback">Feedback</option>
+          <option value="Complaint">Complaint</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="contact-message">Your Message:</label>
+        <textarea
+          id="contact-message"
+          name="message"
+          rows="5"
+          required
+        ></textarea>
+
+        <input type="submit" value="Send Message" />
       </form>
+
+      <p id="contact-response"></p>
     </main>
     <footer>&copy;ST10515946</footer>
+    <script src="js/contact.js"></script>
   </body>
 </html>

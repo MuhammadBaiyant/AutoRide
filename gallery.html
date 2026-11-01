@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery</title>
+    <title>Vehicle Gallery | AutoRide Car Rentals</title>
+    <meta
+      name="description"
+      content="View the vehicles available for hire at AutoRide Car Rentals, from economy cars to luxury vehicles."
+    />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
   <body class="gallery-page">
@@ -14,6 +18,7 @@
         <a href="about.html">About Us</a>
         <a href="services.html">Services</a>
         <a href="gallery.html">Gallery</a>
+        <a href="enquiry.html">Rental Enquiry</a>
         <a href="contact.html">Contact Us</a>
       </nav>
     </header>
@@ -33,11 +38,21 @@
         <figcaption>SUV Vehicle</figcaption>
       </figure>
       <figure>
-        <img src="images/luxury.jpg" alt="Luxury car" class="gallery-image" />
+        <img
+          src="images/luxury.jpg"
+          alt="Luxury car"
+          class="gallery-image"
+          loading="lazy"
+        />
         <figcaption>Luxury Vehicle</figcaption>
       </figure>
       <figure>
-        <img src="images/cars.jpg" alt="Rental car" class="gallery-image" />
+        <img
+          src="images/cars.jpg"
+          alt="Rental car"
+          class="gallery-image"
+          loading="lazy"
+        />
         <figcaption>AutoRide Rental Vehicles</figcaption>
       </figure>
       <h2>Our Cars in Action</h2>
@@ -49,7 +64,13 @@
         />
         Your browser does not support the video element.
       </video>
+
+      <div id="lightbox" class="lightbox" hidden>
+        <button id="close-lightbox" type="button">Close ✕</button>
+        <img id="lightbox-image" src="" alt="Enlarged vehicle image" />
+      </div>
     </main>
     <footer>&copy;ST10515946</footer>
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services</title>
+    <title>Car Rental Services and Prices | AutoRide</title>
+    <meta
+      name="description"
+      content="Explore AutoRide vehicle rental options, including economy cars, sedans, SUVs, luxury vehicles and long-term rentals."
+    />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
   <body class="services-page">
@@ -14,77 +18,37 @@
         <a href="about.html">About Us</a>
         <a href="services.html">Services</a>
         <a href="gallery.html">Gallery</a>
+        <a href="enquiry.html">Rental Enquiry</a>
         <a href="contact.html">Contact Us</a>
       </nav>
     </header>
     <main>
-      <!-- //list of offered cars -->
       <h2>Our Services</h2>
 
-      <h3>Economy Car Rentals</h3>
-      <p>
-        Affordable and fuel-efficient cars that are suitable for everyday
-        travel.
-      </p>
-      <p>Estimated price: R350 per day</p>
+      <p>Search for a vehicle or filter by category.</p>
 
-      <h3>Sedan Rentals</h3>
-      <p>
-        Comfortable vehicles suitable for business trips and longer journeys.
-      </p>
-      <p>Estimated price: R500 per day</p>
+      <input
+        type="text"
+        id="search"
+        placeholder="Search by vehicle or model..."
+      />
 
-      <h3>SUV Rentals</h3>
-      <p>Spacious vehicles suitable for families, holidays and longer trips.</p>
-      <p>Estimated price: R750 per day</p>
+      <select id="category">
+        <option value="all">All Vehicles</option>
+        <option value="Economy">Economy</option>
+        <option value="Sedan">Sedan</option>
+        <option value="SUV">SUV</option>
+        <option value="Luxury">Luxury</option>
+        <option value="Long-Term">Long-Term Rentals</option>
+      </select>
 
-      <h3>Luxury Car Rentals</h3>
-      <p>
-        Premium vehicles for customers looking for a more luxurious driving
-        experience.
-      </p>
-      <p>Estimated price: R1,500 per day</p>
+      <select id="sort">
+        <option value="default">Default Order</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+      </select>
 
-      <h3>Long-Term Rentals</h3>
-      <p>
-        Flexible rental options for customers who need a vehicle for an extended
-        period.
-      </p>
-      <p>Estimated price: From R8,000 per month</p>
-
-      <h2>Vehicle Prices</h2>
-      <!-- //table to display some vehicles -->
-      <table>
-        <tr>
-          <th>Car Type</th>
-          <th>Example Vehicle</th>
-          <th>Price Per Day</th>
-        </tr>
-
-        <tr>
-          <td>Economy</td>
-          <td>Toyota Starlet</td>
-          <td>R350</td>
-        </tr>
-
-        <tr>
-          <td>Sedan</td>
-          <td>Toyota Corolla</td>
-          <td>R500</td>
-        </tr>
-
-        <tr>
-          <td>SUV</td>
-          <td>Toyota Fortuner</td>
-          <td>R750</td>
-        </tr>
-
-        <tr>
-          <td>Luxury</td>
-          <td>BMW 3 Series</td>
-          <td>R1,500</td>
-        </tr>
-      </table>
+      <div id="vehicle-list"></div>
 
       <h2>Frequently Asked Questions</h2>
 
@@ -124,5 +88,6 @@
     <footer>&copy;ST10515946</footer>
 
     <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
   </body>
 </html>
