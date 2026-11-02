@@ -12,22 +12,27 @@
   <body class="gallery-page">
     <header>
       <h1>AutoRide Car Rentals</h1>
-      <nav>
-        <img src="images/logo.png" class="logo" />
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="enquiry.html">Rental Enquiry</a>
-        <a href="contact.html">Contact Us</a>
+      <nav class="navbar">
+        <a href="home.html" class="nav-logo">
+          <img src="images/logo.png" alt="AutoRide Car Rentals logo" />
+        </a>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="gallery.html" class="active">Gallery</a>
+          <a href="enquiry.html">Rental Enquiry</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
       </nav>
     </header>
     <main>
       <h2>Our Vehicle Gallery</h2>
       <!-- //figure tells the browser:"This content is a self-contained figure/illustration related to the page." -->
       <figure>
-        <img src="images/economy.jpg" alt="Economy car" class="gallery-image" />
-        <figcaption>Economy Vehicle</figcaption>
+        <img src="images/cars.jpg" alt="Rental car" class="gallery-image" />
+        <figcaption>AutoRide Rental Vehicles</figcaption>
       </figure>
       <figure>
         <img src="images/sedan.jpg" alt="Sedan" class="gallery-image" />
@@ -46,14 +51,15 @@
         />
         <figcaption>Luxury Vehicle</figcaption>
       </figure>
+
       <figure>
         <img
-          src="images/cars.jpg"
-          alt="Rental car"
+          src="images/economy.jpg"
+          alt="Economy car"
           class="gallery-image"
           loading="lazy"
         />
-        <figcaption>AutoRide Rental Vehicles</figcaption>
+        <figcaption>Economy Vehicle</figcaption>
       </figure>
       <h2>Our Cars in Action</h2>
 
@@ -70,7 +76,11 @@
         <img id="lightbox-image" src="" alt="Enlarged vehicle image" />
       </div>
     </main>
-    <footer>&copy;ST10515946</footer>
+    <footer>
+      <div class="footer-bottom">
+        <p>&copy; 2026 AutoRide Car Rentals. All rights reserved. ST10515946</p>
+      </div>
+    </footer>
     <script src="js/main.js"></script>
   </body>
 </html>

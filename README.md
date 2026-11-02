@@ -59,6 +59,11 @@ Created robots.txt and sitemap.xml.
 Added lazy loading to images and video loading optimisation.
 Included basic website security considerations.
 
+Published website to git hub pages, domain and https :
+https://muhammadbaiyant.github.io/AutoRide/
+
+![Git Pages](images/git-pages.png)
+
 ## Website Features
 
 Navigation between all website pages.
@@ -81,7 +86,7 @@ The website uses CSS media queries to adjust the layout for different screen siz
 
 ### Tablet
 
-![Tablet view](images/image.png)
+![Tablet view](images/ipad.png)
 
 ### Mobile
 
@@ -116,4 +121,3 @@ Connect forms to a backend or form service to receive and store customer submiss
 Implement AJAX form submission.
 Add more vehicle options and images.
 Improve search engine visibility through backlinks and local business listings.
-Publish the website using a domain and HTTPS.

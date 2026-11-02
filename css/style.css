@@ -6,34 +6,124 @@
 }
 
 /* Base Style */
+html,
+body {
+  min-height: 100%;
+}
+
 body {
   font-family: Arial, sans-serif;
   font-size: 1rem;
   color: #333333;
   line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Page-specific backgrounds */
 .home-page {
   background-color: cornflowerblue;
 }
+
 .about-page {
   background-color: aquamarine;
 }
+
 .services-page {
   background-color: darkseagreen;
 }
+
 .gallery-page {
   background-color: darkgray;
 }
+
+.enquiry-page {
+  background-color: salmon;
+}
+
 .contact-page {
   background-color: darkcyan;
 }
 
-/*logo on every page*/
+/* Main Content */
+main {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  flex: 1;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 0.05rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.02rem;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #222222;
+  padding: 0.5rem 5%;
+  gap: 1rem;
+}
+
+.nav-logo img {
+  width: 60px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.6rem 0.8rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #444444;
+}
+
+/* Active Page */
+.nav-links a.active {
+  background-color: rosybrown;
+}
+
+/* Images */
 .logo {
   width: 70px;
   height: 85px;
+}
+
+.home-image {
+  width: 100%;
+  max-width: 31.25rem;
+  height: auto;
 }
 
 .about-image {
@@ -42,33 +132,17 @@ body {
   height: auto;
 }
 
-/*table in services page*/
-table {
-  width: 90%;
-  margin: 2rem auto;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  border: 1px solid #333333;
-  padding: 0.75rem;
-  text-align: left;
-}
-th {
-  font-weight: bold;
-  background-color: darkgreen;
-}
-tr:hover {
-  background-color: darkgreen;
-}
-
-/* Gallery page css*/
-
+/* Gallery */
 .gallery-image {
   width: 100%;
   max-width: 25rem;
   height: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
 }
 
 .gallery-video {
@@ -88,7 +162,41 @@ figcaption {
   margin-top: 0.5rem;
 }
 
-/* Contact page css*/
+/* Gallery Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+#close-lightbox {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+/* Contact Page */
 .map {
   width: 100%;
   max-width: 31.25rem;
@@ -97,10 +205,18 @@ figcaption {
   margin: 1rem;
 }
 
+/* Contact Form */
 form {
   width: 90%;
   max-width: 37.5rem;
   margin: 2rem auto;
+}
+
+form label {
+  display: block;
+  text-align: left;
+  margin-top: 1rem;
+  font-weight: bold;
 }
 
 input,
@@ -130,87 +246,21 @@ input[type="submit"]:hover {
   background-color: lightgray;
 }
 
-/* Typography */
-
-h1 {
-  font-size: 2.5rem;
+/* Contact Form Responses */
+#enquiry-response,
+#contact-response {
   font-weight: bold;
-  line-height: 1.2;
-  letter-spacing: 0.05rem;
+  margin: 1rem;
 }
 
-h2 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  line-height: 1.3;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.5;
-  letter-spacing: 0.02rem;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 1rem;
-}
-
-main {
-  width: 90%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/*homw page image*/
-.home-image {
-  width: 100%;
-  max-width: 31.25rem;
-  height: auto;
-}
-
-/*media queries*/
-
-/* Tablet */
-@media (max-width: 1024px) {
-  nav {
-    gap: 0.5rem;
-  }
-
-  h1 {
-    font-size: 2.2rem;
-  }
-}
-
-/* Mobile */
-@media (max-width: 767px) {
-  nav {
-    flex-direction: column;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  main {
-    width: 95%;
-  }
-}
-
+/* Lists */
 ul {
   list-style-position: inside;
   padding: 0;
   margin: 1rem auto;
 }
 
-/* FAQ accordion */
-
+/* FAQ Accordion */
 .faq {
   max-width: 37.5rem;
   margin: 2rem auto;
@@ -248,8 +298,7 @@ ul {
   display: none;
 }
 
-/* Dynamic vehicle listings */
-
+/* Dynamic Vehicle Listings */
 #search,
 #category,
 #sort {
@@ -277,61 +326,57 @@ ul {
   margin-bottom: 0.5rem;
 }
 
-.gallery-image {
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.gallery-image:hover {
-  transform: scale(1.05);
-}
-
-.lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.lightbox[hidden] {
-  display: none;
-}
-
-.lightbox img {
-  max-width: 90%;
-  max-height: 80%;
-  object-fit: contain;
-}
-
-#close-lightbox {
+/* Footer */
+.footer-bottom {
+  background-color: #222222;
   color: white;
-  background-color: transparent;
-  border: 1px solid white;
-  padding: 0.5rem 1rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
 }
 
-form label {
-  display: block;
-  text-align: left;
-  margin-top: 1rem;
-  font-weight: bold;
+.footer-bottom p {
+  font-size: 0.9rem;
 }
 
-#enquiry-response {
-  font-weight: bold;
-  margin: 1rem;
+/* Tablet */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 0.5rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
 }
 
-#contact-response {
-  font-weight: bold;
-  margin: 1rem;
+/* Mobile */
+@media (max-width: 767px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.3rem;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    width: 95%;
+  }
 }
